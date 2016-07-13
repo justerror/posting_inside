@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/normalize.css" rel="stylesheet">
+<!--  <link href="css/style.css" rel="stylesheet">-->
+  <title>tooleep</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="main-header__inner">
+      <div class="main-header__logo">
+        <img src="img/logo-small.png" alt="Логотип toolep" width="130" height="40">  
+      </div>
+      <ul class="main-nav">
+        <li class="main-mav__item">
+          <a class="mainN-nav__link  main-nav__link--create" href="#">Создать пост</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link  main-nav__link--queue" href="#">Очередь</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link  main-nav__link--history" href="#">История</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link  main-nav__link--timing " href="#">Расписание</a>
+        </li>
+      </ul>
+      <ul class="usernav">
+        <li class="user-nav__item">
+          <a href="#">Alex Plyuto</a>
+        </li>
+        <li class="user-nav__item">
+          <a href="#">30$</a>
+        </li>
+        <li class="user-nav__item">
+          <a href="#">Выход</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="main-body">
+    <aside class="main-aside">
+      <div class="main-aside__inner">
+        <span class="main-aside__title">Текущий аккаунт</span>
+        <ul class="main-aside__list">
+          <li class="main-aside__item main-aside__item--candyshop">
+            <a href=""><img src="img/candy_shop.jpg" alt="">candy_shop</a>
+          </li>
+          <li class="main-aside__item main-aside__item--bestfood">
+            <a href=""><img src="img/bestfood.jpg" alt="">bestfood</a>
+          </li>
+          <li class="main-aside__item main-aside__item--businessidea">
+            <a href=""><img src="img/business_idea.jpg" alt="">business_idea</a>
+          </li>
+          <li class="main-aside__item main-aside__item--add">
+            <a href=""><img src="img/icon-add-acc.svg" alt="">Добавить</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <div class="main-content">
+      <div class="main-content__inner">
+        <div class="tabs">
+          <input id="tab1" type="radio" name="tabs" checked>
+          <label class="tabs__btn" for="tab1">Новый</label>
+          <input id="tab2" type="radio" name="tabs">
+          <label class="tabs__btn" for="tab2">Сделать repost</label>
+          <section class="tabs__сontent" id="content1">
+            <article class="box">
+              <div class="box__inner box__inner-dropbox">
+                <div class="dropbox">
+                  <div class="dropbox__zone">
+                    <img class="dropbox__zone--icon" src="img/icon-inbox.svg" alt="">
+                    <p class="dropbox__zone--text">Перетащите сюда
+                      <br> фотографию или видео
+                      <br> (.JPG, .PNG, .MP4, .AVI, .3GP)</p>
+                    <a class="dropbox__btn dropbox__btn--upload" id="file-upload" href="">Загрузить</a>
+                    <a class="dropbox__btn dropbox__btn--url" id="file-url" href="">URL</a>
+                  </div>
+                  <div class="dropbox__panel">
+                    <a class="dropbox__btn dropbox__btn-edit" id="file-edit" href="">Редактировать</a>
+                    <a class="dropbox__btn dropbox__btn-delete" id="file-delete" href="">Удалить</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="box">
+              <div class="box__inner box__inner--textarea">
+                <div class="textarea">
+                  <div class="textarea__zone">
+                  <div class="textarea__panel">
+                    <span class="textarea__symbols">124</span>
+                    <a clsdd="textarea__smiles" href="">
+                      <img src="img/icon-smile.svg" alt="">
+                    </a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <aricle class="box">
+              <div class="box__inner box__inner--checkout">
+                <div class="calendar">
+                  <div class="calendar__inner">
+                    <div class="calendar-header">
+                      <a class="calendar-header__arrow calendar-header__arrow--prev" href=""></a>
+                      <span id="month-year">july 2014</span>
+                      <a class="calendar-header__arrow calendar-header__arrow-next" href=""></a>
+                    </div>
+                    <table class="calendar-body">
+                      <tr>
+                        <th  class="calendar-body__dayWeek">M</th>
+                        <th  class="calendar-body__dayWeek">T</th>
+                        <th  class="calendar-body__dayWeek">W</th>
+                        <th  class="calendar-body__dayWeek">T</th>
+                        <th  class="calendar-body__dayWeek">F</th>
+                        <th  class="calendar-body__dayWeek">S</th>
+                        <th  class="calendar-body__dayWeek">S</th>
+                      </tr>
+                      <tr>
+                        <td class="calendar-body__day calendar-body__day--disabled">29</td>
+                        <td class="calendar-body__day calendar-body__day--disabled">30</td>
+                        <td class="calendar-body__day">1</td>
+                        <td class="calendar-body__day">2</td>
+                        <td class="calendar-body__day calendar-body__day--holiday">3</td>
+                        <td class="calendar-body__day">4</td>
+                        <td class="calendar-body__day">5</td>
+                      </tr>
+                      <tr>
+                        <td class="calendar-body__day">6</td>
+                        <td class="calendar-body__day">7</td>
+                        <td class="calendar-body__day">8</td>
+                        <td class="calendar-body__day">9</td>
+                        <td class="calendar-body__day">10</td>
+                        <td class="calendar-body__day">11</td>
+                        <td class="calendar-body__day">12</td>
+                      </tr>
+                      <tr>
+                        <td class="calendar-body__day calendar-body__day--current">13</td>
+                        <td class="calendar-body__day">14</td>
+                        <td class="calendar-body__day">15</td>
+                        <td class="calendar-body__day">16</td>
+                        <td class="calendar-body__day">17</td>
+                        <td class="calendar-body__day">18</td>
+                        <td class="calendar-body__day">19</td>
+                      </tr>
+                      <tr>
+                        <td class="calendar-body__day">20</td>
+                        <td class="calendar-body__day">21</td>
+                        <td class="calendar-body__day">22</td>
+                        <td class="calendar-body__day">23</td>
+                        <td class="calendar-body__day">24</td>
+                        <td class="calendar-body__day">25</td>
+                        <td class="calendar-body__day">26</td>
+                      </tr>
+                      <tr>
+                        <td class="calendar-body__day">27</td>
+                        <td class="calendar-body__day">28</td>
+                        <td class="calendar-body__day">29</td>
+                        <td class="calendar-body__day">30</td>
+                        <td class="calendar-body__day">31</td>
+                        <td class="calendar-body__day calendar-body__day--disabled">1</td>
+                        <td class="calendar-body__day calendar-body__day--disabled">2</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="calendar-footer">
+                    <a class="calendar-footer__link calendar-footer__link--time" href="">13:00</a>
+                    <a href="calendar-footer__link calendar-footer__link--timing">по расписанию</a>
+                  </div>
+                </div>
+                <div class="checkout">
+                  <div class="checkout__panel">
+                    <a class="checkout__btn checkout__btn--sendLater" href="">В очередь</a>
+                    <a class="checkout__btn checkout__btn--sendNow" href="">Отправить сейчас</a>
+                  </div>
+                </div>
+              </div>
+            </aricle>
+          </section>
+          <section class="tabs__сontent">
+            <article class="box">
+              <div class="box__inner box__inner--repost">
+                <div class="repost">
+                  <input class="repost__url" type="text" placeholder="Введите URL вашего поста">
+                  <button class="repost__btn" type="submit">OK</button>
+                </div>
+              </div>
+            </article>
+          </section> 
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
+
+
+<!--
+        <div class="schedule-modal">
+  <table>
+    <tr>
+      <td><span>1</span>12:35</td>
+      <td><span>1</span>12:35</td>
+    </tr>
+    <tr>
+      <td><span>2</span>12:45</td>
+      <td><span>2</span>12:45</td>
+    </tr>
+    <tr>
+      <td><span>3</span>12:55</td>
+      <td><span>3</span>12:55</td>
+    </tr>
+    <tr>
+      <td><span>4</span>13:35</td>
+      <td><span>4</span>13:35</td>
+    </tr>
+    <tr>
+      <td><span>5</span>13:45</td>
+      <td><span>5</span>13:45</td>
+    </tr>
+    <tr>
+      <td><span>6</span>13:55</td>
+      <td><span>6</span>13:55</td>
+    </tr>
+    <tr>
+      <td><span>7</span>16:05</td>
+      <td><span>7</span>16:05</td>
+    </tr>
+    <tr>
+      <td><span>8</span>16:10</td>
+      <td><span>8</span>16:10</td>
+    </tr>
+  </table>
+</div>-->
