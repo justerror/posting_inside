@@ -4,15 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--  <link href="css/normalize.css" rel="stylesheet">-->
+<!--  <link href="css/normalize.css" rel="stylesheet">-->
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>tooleep</title>
 </head>
 
-<body>
   <header class="main-header">
     <div class="main-header__inner">
+      <label class="aside-icon" for="aside-trigger"></label>
+      <input class="menu-trigger" id="menu-trigger" type="checkbox">
+      <label class="menu-icon" for="menu-trigger"></label>
       <div class="main-header__logo">
         <img src="img/logo-small.png" alt="Логотип toolep" width="130" height="40">
       </div>
@@ -58,6 +60,8 @@
   </header>
   <main class="main-body">
     <div class="main-body__wrapper">
+      <input class="aside-trigger" id="aside-trigger" type="checkbox">
+
       <aside class="acc-nav">
         <span class="acc-nav__title">Текущий аккаунт</span>
         <ul class="acc-nav__list">
@@ -215,8 +219,8 @@
           </div>
         </div>
       </div>
+    </div>
   </main>
-  </div>
 </body>
 
 </html>

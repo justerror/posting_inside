@@ -22,17 +22,19 @@ body {
 /* Шапка страницы */
 
 .main-header__inner {
+  position: relative;
   display: flex;
   background-color: #fff;
 }
 
 .main-header__logo {
   flex: 0 0 250px;
+  padding: 15px 0;
 }
 
 .main-header__logo img {
   display: block;
-  margin: 15px auto;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1365px) {
@@ -42,12 +44,20 @@ body {
 }
 
 @media screen and (max-width: 1050px) {
-  .main-header__logo img {
-    margin: 5px auto;
+  .main-header__logo {
+    padding: 5px 0;
   }
 }
 
 @media screen and (max-width: 866px) {
+  .main-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    min-width: 320px;
+    border-bottom: 1px solid #e3e3e3;
+  }
   .main-header__inner {
     display: block;
   }
@@ -113,11 +123,11 @@ body {
 
 @media screen and (max-width: 866px) {
   .main-nav {
-    display: block;
+    display: none;
     text-align: center;
   }
   .main-nav__link {
-    padding: 2.4% 20%;
+    padding: 17px 0;
     font-weight: 600;
     border: none;
     background-image: none;
@@ -162,6 +172,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1051px) {
+  .user-nav {
+    display: flex !important;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   .user-nav {
     display: none;
@@ -173,12 +189,11 @@ body {
 
 @media screen and (max-width: 866px) {
   .user-nav {
-    display: block;
-    margin-top: 1%;
+    display: none;
+/*    margin-top: 1%;*/
     border-top: 1px solid #e4e4e4;
   }
   .user-nav__link {
-    padding: 2.3%;
     font-weight: 600;
     border: none;
   }
@@ -320,6 +335,12 @@ body {
 
 .main-content__inner {
   margin: 2.9%;
+}
+
+@media screen and (max-width: 866px) {
+  .main-content__inner {
+    margin-top: 70px;
+  }
 }
 
 
@@ -774,4 +795,97 @@ body {
 
 :focus:-ms-input-placeholder {
   color: transparent;
+}
+
+
+/* Главное мобильное меню */
+
+.menu-trigger {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 31px;
+  cursor: pointer;
+}
+
+#menu-trigger:checked ~ .main-nav,
+#menu-trigger:checked ~ .user-nav {
+  display: block;
+}
+
+#menu-trigger:checked ~ .menu-icon {
+  background-image: url(../img/cross.svg);
+  background-size: 25px;
+}
+
+@media screen and (min-width: 867px) {
+  .menu-icon {
+    display: none;
+  }
+  .main-nav {
+    display: flex !important;
+  }
+}
+
+@media screen and (min-width: 867px) and (max-width: 1050px) {
+  .user-nav {
+    display: none !important;
+  }
+}
+
+
+/* Боковое (аккаунты) мобильное */
+
+.aside-trigger {
+  display: none;
+}
+
+.aside-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/group.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35px;
+  cursor: pointer;
+}
+
+#aside-trigger:checked ~ .acc-nav,
+#aside-trigger:checked ~ .acc-nav {
+  display: block;
+  min-width: 200px;
+  max-width: 50%;
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#aside-trigger:checked ~ .aside-icon {
+  background-image: url(../img/cross.svg);
+  background-size: 25px;
+}
+
+@media screen and (min-width: 867px) {
+  .aside-icon {
+    display: none;
+  }
+  .acc-nav {
+    position: static !important;
+  }
 }
