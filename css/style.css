@@ -1,3 +1,34 @@
+/* Подключаем шрифты */
+
+@font-face {
+  font-family: Calibri;
+  src: url(../font/calibril.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Calibri;
+  src: url(../font/calibri.ttf);
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: Calibri;
+  src: url(../font/calibrib.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family:;
+  src: url(../font/MyriadPro-Regular.otf);
+}
+
+@font-face {
+  font-family:;
+  src: url(../font/MyriadPro-Bold.otf);
+}
+
 /* Общие стили */
 
 * {
@@ -589,7 +620,7 @@ body {
 /* Календарь и отправка */
 
 .calendar {
-  font-family: Myriad Pro, sans-serif;
+  font-family: "Myriad Pro", Calibri, sans-serif;
   text-align: center;
 }
 
@@ -740,7 +771,6 @@ body {
 .checkout__btn--send-now:hover {
   background-color: #0277bd;
 }
-
 
 
 /* Репост */
@@ -906,4 +936,59 @@ body {
   .acc-nav {
     position: static !important;
   }
+}
+
+
+/* Модальное окно */
+
+.schedule-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.schedule-modal-show {
+  display: block;
+}
+
+.schedule-modal table {
+  position: absolute;
+  top: 50%;
+  left :50%;
+  transform: translate(-50%, -50%);
+    width: 430px;
+  height: 570px;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-collapse: separate;
+  border-spacing: 30px 10px;
+}
+
+.schedule-modal td {
+  vertical-align: middle;
+  width: 150px;
+  height: 50px;
+  padding-right: 20px;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: right;
+  color: #fff;
+  background-color: #0288d1;
+  background-image: linear-gradient(to right, #0277bd 33%, #0288d1 33%);
+  cursor: pointer;
+}
+
+.schedule-modal td:hover {
+  background-color: #29b6f6;
+  background-image: linear-gradient(to right, #03a9f4 33%, #29b6f6 33%);  
+}
+
+.schedule-modal span {
+  float: left;
+  padding-left: 20px;
 }
