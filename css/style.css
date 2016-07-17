@@ -440,6 +440,10 @@ body {
   padding: 11.3%;
 }
 
+.box__inner--repost {
+  padding: 47.8% 9.2%;
+}
+
 @media screen and (max-width: 1365px) {
   .box {
     border: none;
@@ -521,6 +525,11 @@ body {
 
 .textarea__zone:focus {
   outline: none;
+}
+
+.textarea__hashtag {
+  font-weight: 400;
+  color: #0288d1;
 }
 
 .textarea__panel {
@@ -720,9 +729,18 @@ body {
   border: 1px solid #0089d5;
 }
 
+.checkout__btn--send-later:hover {
+  border-color: #0277bd;
+}
+
 .checkout__btn--send-now {
   background-image: url(../img/icon-send.svg);
 }
+
+.checkout__btn--send-now:hover {
+  background-color: #0277bd;
+}
+
 
 
 /* Репост */
@@ -843,7 +861,7 @@ body {
 }
 
 
-/* Боковое (аккаунты) мобильное */
+/* Боковое мобильное меню (аккаунты) */
 
 .aside-trigger {
   display: none;
